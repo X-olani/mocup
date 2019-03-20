@@ -1,0 +1,180 @@
+#root {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+//nav bar
+.nav-bars {
+  display: none;
+  cursor: pointer;
+}
+nav {
+  border-bottom: 2px solid gray;
+  .nav-tabs {
+    border: 2px solid gray;
+  }
+  #nav-dropDown {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  background-color: white;
+  height: 100px;
+}
+.dropDown_menu:hover {
+  .dropdown-content {
+    display: block;
+  }
+}
+.dropdown-content {
+  background-color: white;
+  width: 194px;
+  z-index: 2;
+  position: absolute;
+  display: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.dropdown-content-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  margin-top: 28px;
+}
+.dropdown-content-header:hover {
+  background-color: lightgray;
+}
+h3 {
+  margin: 0px;
+}
+//
+p {
+  font-size: 1.5rem;
+}
+#logo {
+  width: 22%;
+}
+.headers {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.main-img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: -webkit-fill-available;
+  background-image: url("./images/pexels-photo-169976.jpeg");
+  .buttons {
+    display: flex;
+    height: -webkit-fill-available;
+    align-items: center;
+    justify-content: center;
+  }
+  #select-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 180px;
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+  }
+  #select-side:hover {
+    border-color: lightseagreen;
+    cursor: pointer;
+  }
+}
+//adult page
+.adult-main {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.mine-info1,
+.mine-info2 {
+  width: 48%;
+}
+.img-a {
+  width: 30px;
+}
+.image-adultPage {
+  background-image: url("./images/1003868.jpeg");
+  height: 562px;
+  background-size: cover;
+}
+
+//kid page
+.image-kidPage {
+  background-image: url("./images/theone.jpeg");
+  height: 657px;
+  background-size: 50%;
+}
+.kid-main {
+  padding: 10px;
+  display: flex;
+}
+
+//footer
+
+.footer {
+  padding: 10px;
+  height: 100px;
+  border-top: 2px solid gray;
+  background-color: gray;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 300px) {
+  #nav-dropDown {
+    display: block;
+    width: 100%;
+  }
+  .nav {
+    align-items: center;
+  }
+  #logo-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  .nav-bars {
+    display: block;
+  }
+  .headers {
+    display: none;
+  }
+  #logo {
+    width: 60%;
+  }
+
+  // adult
+  .image-adultPage {
+    height: 203px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .adult-main {
+    flex-direction: column;
+  }
+  .mine-info1,
+  .mine-info2 {
+    width: 100%;
+  }
+
+  //kids
+  .image-kidPage {
+    height: 281px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

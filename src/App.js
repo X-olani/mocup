@@ -1,28 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "./app.scss";
+import { Kid } from "./Components/kids";
+import { Adult } from "./Components/adult";
+import { NavLink } from "react-router-dom";
+export const App = props => {
+  document.addEventListener("DOMContentLoaded", () => {
+    //  document.getElementById("kid").style.display = "none";
+    // document.getElementById("adult").style.display = "none";
+  });
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <div id="home">
+      <div className="main-img">
+        <div className="buttons">
+          <NavLink
+            to="/kids"
+            id="select-side" /* onClick={() => show("kids")}*/
           >
-            Learn React
-          </a>
-        </header>
+            <label>kids</label>
+          </NavLink>
+          <NavLink
+            to="/adult"
+            id="select-side" /*onClick={() => show("adult")}*/
+          >
+            <label>Adults</label>
+          </NavLink>
+        </div>
       </div>
-    );
-  }
-}
-
-export default App;
+      <div />
+    </div>
+  );
+};
